@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Teacher Attendance</h2>
+<form method="POST">
+    <input name="teacher_name" placeholder="Teacher Name" required>
+    <input name="att_date" type="date" value="{{ today }}" required>
+    <select name="status">
+        <option>Present</option><option>Absent</option><option>Late</option>
+    </select>
+    <button type="submit">Record</button>
+</form>
+
+<table>
+    <tr><th>Date</th><th>Teacher</th><th>Status</th></tr>
+    {% for r in records %}
+    <tr><td>{{ r[2] }}</td><td>{{ r[1] }}</td><td>{{ r[3] }}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
