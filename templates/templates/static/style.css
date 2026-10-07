@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; }
+nav { background: #0b3d91; color: white; padding: 15px 30px; }
+nav h1 { margin: 0 0 10px 0; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+main { padding: 30px; max-width: 1100px; margin: auto; }
+form { background: white; padding: 20px; border-radius: 8px; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+form input, form select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; flex: 1; min-width: 150px; }
+button { padding: 10px 20px; background: #0b3d91; color: white; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #082e6e; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #0b3d91; color: white; }
+.flash { background: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+.cards { display: flex; gap: 20px; }
+.card { background: white; padding: 20px; border-radius: 8px; flex: 1; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card h3 { margin: 0; color: #0b3d91; font-size: 32px; }
