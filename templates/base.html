@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mawuli School SHS - Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>🏫 Mawuli School SHS</h1>
+        <ul>
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/students">Students</a></li>
+            <li><a href="/fees">PTA Fees</a></li>
+            <li><a href="/teacher-attendance">Teacher Attendance</a></li>
+            <li><a href="/student-attendance">Student Attendance</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for m in messages %}<div class="flash">{{ m }}</div>{% endfor %}
+          {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
