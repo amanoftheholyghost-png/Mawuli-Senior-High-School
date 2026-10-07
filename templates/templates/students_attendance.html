@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Student Attendance</h2>
+<form method="POST">
+    <select name="student_id" required>
+        <option value="">-- Select Student --</option>
+        {% for s in students %}
+        <option value="{{ s[0] }}">{{ s[1] }} ({{ s[0] }})</option>
+        {% endfor %}
+    </select>
+    <input name="att_date" type="date" value="{{ today }}" required>
+    <select name="status">
+        <option>Present</option><option>Absent</option><option>Late</option>
+    </select>
+    <button type="submit">Record</button>
+</form>
+
+<table>
+    <tr><th>Date</th><th>Student</th><th>Status</th></tr>
+    {% for r in records %}
+    <tr><td>{{ r[3] }}</td><td>{{ r[2] or r[1] }}</td><td>{{ r[4] }}</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
